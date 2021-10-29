@@ -84,4 +84,83 @@
 10) Copy File1 to File6. Add the errors to “errorlog”
 --> cat File1 File2 File3 File4 File4 File5 File6 >&errorlog
 
+ *****************************************************************TRY 3 ********************************************************************************
+1) Lines containing A
+--> grep "A" file1
+
+2) lines containing The at the beginning
+--> grep "^The" file1
+
+3) lines  ending with  .
+--> grep "\.$" file1
+
+4) lines with a,b or c as the second letter
+-->grep "^.[abc]" file1
+
+5) lines which contain def , deef or deeeef 
+-->grep "def" file1 || grep "deef" file1 || grep "deeeef"
+
+6)lines not having numbers at the beginning
+--> grep "^[^0-9]" file1
+
+*list the password file details of user1 - user10
+*list only directories
+*list out the C programs in the current directory which are using math library file (hint:  math library file - math.h)
+
+
+ *****************************************************************TRY 4 ********************************************************************************
+
+
+1) Insert an heading at the beginning of the file
+--> Press O
+
+2) Remove the second line in the file and try undo command
+--> At the second line press dd to remove and press u to undo
+  	    	
+3) Search for all occurrences of bc
+--> :/bc
+ 
+4) Remove the word number
+--> search word number by :/number and then press dw to delete word
+
+5) Replace all occurrences of char c in line1 only with C
+-->:1,2s/c/C/g =>because line 1 will be heading so we are representing 1,2
+
+6) Replace all occurrences of space with \t
+-->:1,$s/ /\t/g
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     
